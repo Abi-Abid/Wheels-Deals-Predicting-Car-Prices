@@ -1,4 +1,4 @@
-# Used Car Pricing Analysis & Prediction
+# Wheels & Deals: Predicting Car Prices
 
 ## Overview
 This project explores **used car pricing** through **data analysis and machine learning** to identify key factors influencing car prices. The workflow includes data preprocessing, exploratory data analysis (EDA), and model development using Python.
