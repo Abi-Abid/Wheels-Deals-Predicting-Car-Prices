@@ -1,55 +1,33 @@
-# Wheels & Deals: Predicting Car Prices
+![dan-gold-N7RiDzfF2iw-unsplash](https://github.com/user-attachments/assets/4dd39ae5-5cc5-4b58-ad55-ecba08ea0e60)
 
-## Overview
-This project explores **used car pricing** through **data analysis and machine learning** to identify key factors influencing car prices. The workflow includes data preprocessing, exploratory data analysis (EDA), and model development using Python.
+# Used Car Price Prediction Using ML
+**"Hey, Looking for the right price on a specific car model? No worries—let me ask my ML agent and get you an accurate estimate in seconds!”**
 
-## Dataset
-- The dataset contains information on used car listings, including attributes like **brand, model, year, mileage, fuel type, transmission**, and **price**, total 27 attributes.
-- The source of the dataset is IBM Data Science Professional Certification by Coursera.
+## Introduction 
 
-## Project Workflow
-This project is divided into five key stages:
+In this project, we aim to build an accurate Machine Learning (ML) model that predicts the prices of used cars based on their specifications. While this may initially sound simple, the real-world applications are highly valuable. Imagine you're part of a car dealership, and a customer walks in asking for the price of a specific car model with certain features. With dozens of models and varying configurations, determining an accurate price on the spot can be challenging.
 
-### 1️⃣ Importing & Exporting Data
-- Load the dataset into a Pandas DataFrame.
-- Handle different file formats (CSV, JSON, etc.).
-- Export cleaned data for further processing.
+Now, picture having a smart system or ML model on your tablet—where you simply enter the car’s details, and within seconds, it provides a reliable price estimate. Sounds exciting, right? That’s exactly what this project sets out to achieve.
 
-### 2️⃣ Data Wrangling
-- Handle missing values and outliers.
-- Convert data types and standardize column names.
-- Feature engineering (creating new variables for better insights).
+# Key Insights
 
-### 3️⃣ Exploratory Data Analysis (EDA)
-- Statistical summaries of numerical and categorical features.
-- Data visualization using **Matplotlib & Seaborn**.
-- Identifying correlations between variables.
+Based on the findings and comprehensive analysis:
 
-### 4️⃣ Model Development
-- Selecting input features and target variable.
-- Applying **Simple Linear Regression, Multiple Linear Regression and Polynomial Regression** to predict car prices.
-- Splitting data into training and testing sets.
+- It was observed that the original dataset comprised 205 rows and 26 columns, representing 205 cars with 26 different specifications. Upon analyzing the price distribution, it was noted that the data was right-skewed, indicating a higher number of low-priced cars compared to expensive ones.
+- Additionally, scatter plots of both numerical and categorical features showed a significant presence of outliers, which could negatively impact model performance. To address this, outliers were treated using the Interquartile Range (IQR) method, which resulted in a reduced dataset of 185 rows.
+- Despite the reduction, this cleaned dataset contained more consistent and evenly distributed price values, contributing to improved model stability.
 
-### 5️⃣ Model Evaluation & Refinement
-- Evaluating model performance using **metrics like RMSE, MAE, and R²**.
-- Fine-tuning hyperparameters for improved accuracy.
-- Comparing different models and selecting the best one.
+After preprocessing, including one-hot encoding of categorical variables and standardization of numerical features, the dataset was split into training and testing sets with a **70-30 ratio.** Several machine learning models were trained and evaluated for performance. 
 
-## Technologies Used
-- **Python** (pandas, numpy, matplotlib, seaborn, scikit-learn)
-- **Jupyter Notebook**
-- **Machine Learning** (Simple Linear Regression, Multiple Linear Regression, Polynomial Regression)
+- Among these, **Ridge Regression and AdaBoost Regressor demonstrated the best results,** achieving approximately **87% accuracy (R² score)** and comparatively lower MAE and RMSE values.
+- On the other hand, Polynomial Regression (Degree 3) and Support Vector Regressor (SVR) performed poorly, with high errors and low predictive accuracy.
 
-## Key Insights & Findings
-- **Fuel type, mileage, and year** significantly impact used car prices.
-- Outlier detection revealed **unrealistic price values**, which were cleaned during data wrangling.
-- Linear Regression provided a **baseline model**, but more complex models may yield better accuracy.
-- Comparing these three models, we conclude that "MLR model is the best model" to be able to predict price from our dataset. This result makes sense since we have 27 variables in total and we know that one of those variables are potential predictors of the final car price.
+Due to the relatively small size of the dataset, no hyperparameter tuning was applied during model training. This decision was made to avoid the risk of overfitting or underfitting, ensuring that models learned the underlying data patterns without overcomplicating them. Ultimately, Ridge Regression emerged as the most reliable model, offering strong performance and serving as a solid foundation for future expansion as more data becomes available.
 
-## Future Improvements
-- Implement **advanced machine learning models** (Random Forest, XGBoost).
-- Include more features like **car condition and location-based pricing**.
-- Deploy the model as a **web app** using Flask or Streamlit.
+In practical application, especially in a used car dealership context, **the Ridge Regression model can be effectively used to predict the selling price of a car based on its specifications.** This not only aids buyers in making informed decisions but also helps sellers in setting fair and accurate prices. Below picture gives the results of all ML models analyzed. 
+
+
+<img width="641" alt="imageqsqw" src="https://github.com/user-attachments/assets/52027d95-ac9a-48bb-9341-cdbaec1a2c84" />
 
 ---
 ## Author
@@ -57,3 +35,4 @@ This project is divided into five key stages:
 
 Email iD - dabidhussain2502@gmail.com
 
+Thanks for stopping by! If you found this helpful or have suggestions, feel free to leave feedback. Happy learning and exploring new data! 👏
